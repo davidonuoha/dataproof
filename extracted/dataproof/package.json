@@ -1,0 +1,52 @@
+{
+  "name": "dataproof",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DataProof \u2014 an open-source data quality tool for journalists. Inspect CSV datasets for missing values, duplicates, inconsistent categories, invalid dates, numeric anomalies, rule violations and changes between versions \u2014 entirely in the browser.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 4173 --host 127.0.0.1 --strictPort",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -b",
+    "samples": "tsx scripts/gen-samples.ts",
+    "docs:findings": "tsx scripts/gen-findings.ts > docs/SAMPLE-FINDINGS.md"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^25.0.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5",
+    "tsx": "^4.19.0"
+  },
+  "keywords": [
+    "data-journalism",
+    "journalism",
+    "data-quality",
+    "csv",
+    "data-validation",
+    "open-data",
+    "privacy"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
